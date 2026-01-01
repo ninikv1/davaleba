@@ -1,0 +1,202 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+
+body {
+    background: #f7f8fc;
+    min-height: 100vh;
+}
+
+
+.container {
+    width: 100%;
+    min-height: 100vh;
+    position: relative;
+    padding-top: 40px;
+}
+
+
+.content {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+
+.main {
+    text-align: center;
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 30px;
+    letter-spacing: 1px;
+}
+
+
+.header-actions {
+    display: flex;
+    justify-content: center;
+
+    gap: 12px;
+    margin-bottom: 30px;
+}
+
+
+.search-wrapper input {
+    width: 536px;
+    height: 38px;
+    padding: 0 15px;
+    border-radius: 6px;
+    border: 1px solid #c9c6ff;
+    outline: none;
+}
+
+.search-wrapper input::placeholder {
+    color: #aaa;
+}
+
+
+.filter-select {
+    height: 38px;
+    width: 85px;
+    padding: 0 12px;
+    border-radius: 6px;
+    border: none;
+    background: #6C63FF;
+    color: #fff;
+    cursor: pointer;
+}
+
+.theme-toggle {
+    width: 38px;
+    height: 38px;
+    border-radius: 6px;
+    border: none;
+    background: #6C63FF;
+    color: #fff;
+    cursor: pointer;
+}
+
+.notes-list {
+    list-style: none;
+    margin-top: 20px;
+}
+
+.note-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 14px 0;
+    border-bottom: 1px solid #6C63FF;
+}
+
+.note-left {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.custom-checkbox input {
+    display: none;
+}
+
+.custom-checkbox .checkmark {
+    width: 16px;
+    height: 16px;
+    border: 2px solid #6C63FF;
+    border-radius: 2px;
+}
+
+.custom-checkbox input:checked + .checkmark {
+    background: #6C63FF;
+    position: relative;
+}
+
+.custom-checkbox input:checked + .checkmark::after {
+    content: "✓";
+    position: absolute;
+    color: #fff;
+    font-size: 12px;
+    left: 3px;
+    top: -1px;
+}
+
+.note-text {
+    font-size: 13px;
+}
+
+.completed .note-text {
+    text-decoration: line-through;
+    color: #aaa;
+}
+
+.note-actions {
+    font-size: 14px;
+    opacity: 0.6;
+    cursor: pointer;
+    
+}
+
+
+.add-btn {
+    position: fixed;
+    right: 40px;
+    bottom: 40px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: #6C63FF;
+    color: #fff;
+    border: none;
+    font-size: 26px;
+    cursor: pointer;
+}
+
+
+
+
+body.dark {
+    background: #252525;
+}
+
+
+body.dark .main,
+body.dark .note-text {
+    color: #ffffff;
+}
+
+
+body.dark .search-wrapper input {
+    background: #252525;
+    border-color: #6c63ff;
+    color: #fff;
+}
+
+
+body.dark .note-item {
+    border-bottom: 1px solid #252525;
+}
+
+
+body.dark .completed .note-text {
+    color: #777;
+}
+
+
+body.dark .filter-select,
+body.dark .theme-toggle,
+body.dark .add-btn {
+    background: #6c63ff;
+}
+
+
+body.dark .icon {
+    color: #b5b5ff;
+}
+
+
+body.dark .note-actions {
+    opacity: 0.8;
+}
